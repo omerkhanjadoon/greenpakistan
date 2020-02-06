@@ -17,5 +17,7 @@ This application is developed in flutter and can be used on both android and ios
 
 ![alt text](https://github.com/omerkhanjadoon/greenpakistan/blob/master/screenshots/Screenshot_20200206-175300.png)
 
+![alt text](https://github.com/omerkhanjadoon/greenpakistan/blob/master/screenshots/Screenshot_20200206-175553.png)
+
 ## Note
 While installing please make sure to change the google api key in android manifest file with your own key. 
