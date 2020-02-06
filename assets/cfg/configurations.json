@@ -1,0 +1,5 @@
+{
+  "base_url": "http://192.168.0.108/flutterproject/",
+  "api_base_url": "http://192.168.0.108/flutterproject/public/api/",
+  "google_maps_key" : "AIzaSyB1F-b6QOA8S-rKf3niLrUcY71cGGVdiZ4"
+}

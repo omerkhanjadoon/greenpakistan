@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "465536159282",
+    "firebase_url": "https://green-pakistan-app.firebaseio.com",
+    "project_id": "green-pakistan-app",
+    "storage_bucket": "green-pakistan-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:465536159282:android:2e26869a3df4659709762b",
+        "android_client_info": {
+          "package_name": "com.jadoontechnologies.greenpakistan"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "465536159282-1bl87gh9jl0g7ferg3dbgshqpdrtk6f6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBp3mlc5OpobBaQfMuVP2pnOtFVrrdKCfU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "465536159282-1bl87gh9jl0g7ferg3dbgshqpdrtk6f6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
