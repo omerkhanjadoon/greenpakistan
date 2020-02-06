@@ -8,6 +8,8 @@ This application is developed in flutter and can be used on both android and ios
 - Login & Registration
 - Ecommerce(Buy Seeds, Plants)
 - Payment(Paypal,Stripe,Cash on Delivery)
+- Order Tracking
+- Online Consultancy (Comming Soon)
 - Blog(Comming Soon)
 
 
