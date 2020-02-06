@@ -5,7 +5,11 @@ Green Pakistan is a flutter based mobile e-commerce platform which aims to reduc
 This application is developed in flutter and can be used on both android and ios platforms
 
 ## Major Features
-Login & Registration
-Ecommerce(Buy Seeds, Plants)
-Payment(Paypal,Stripe,Cash on Delivery)
-Blog(Comming Soon)
+- Login & Registration
+- Ecommerce(Buy Seeds, Plants)
+- Payment(Paypal,Stripe,Cash on Delivery)
+- Blog(Comming Soon)
+
+
+## Note
+While installing please make sure to change the google api key in android manifest file with your own key 
