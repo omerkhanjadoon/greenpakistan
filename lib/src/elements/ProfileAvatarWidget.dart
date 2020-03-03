@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:green_pakistan/src/models/user.dart';
 
@@ -33,7 +34,8 @@ class ProfileAvatarWidget extends StatelessWidget {
                 width: 135,
                 height: 135,
                 child: CircleAvatar(
-                    backgroundImage: NetworkImage(user.image.thumb)),
+                    backgroundImage:
+                        CachedNetworkImageProvider(user.image.thumb)),
               ),
               SizedBox(
                 width: 50,

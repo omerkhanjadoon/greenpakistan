@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:green_pakistan/src/helpers/helper.dart';
 import 'package:green_pakistan/src/models/item.dart';
@@ -36,7 +37,7 @@ class ItemsCarouselItemWidget extends StatelessWidget {
                     borderRadius: BorderRadius.all(Radius.circular(5)),
                     image: DecorationImage(
                       fit: BoxFit.cover,
-                      image: NetworkImage(item.image.thumb),
+                      image: CachedNetworkImageProvider(item.image.thumb),
                     ),
                   ),
                 ),

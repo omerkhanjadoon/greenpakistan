@@ -1,14 +1,14 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:green_pakistan/src/helpers/helper.dart';
-import 'package:green_pakistan/src/models/item.dart';
+import 'package:green_pakistan/src/models/blog.dart';
 import 'package:green_pakistan/src/models/route_argument.dart';
 
-class ItemItemWidget extends StatelessWidget {
-  final String heroTag;
-  final Item item;
+// ignore: must_be_immutable
+class BlogListItemWidget extends StatelessWidget {
+  String heroTag;
+  Blog blog;
 
-  const ItemItemWidget({Key key, this.item, this.heroTag}) : super(key: key);
+  BlogListItemWidget({Key key, this.heroTag, this.blog}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +18,8 @@ class ItemItemWidget extends StatelessWidget {
       highlightColor: Theme.of(context).primaryColor,
       onTap: () {
         Navigator.of(context).pushNamed('/Item',
-            arguments: RouteArgument(id: item.id, heroTag: this.heroTag));
+            arguments:
+                new RouteArgument(heroTag: this.heroTag, id: this.blog.id));
       },
       child: Container(
         padding: EdgeInsets.symmetric(horizontal: 20, vertical: 8),
@@ -35,14 +36,14 @@ class ItemItemWidget extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
             Hero(
-              tag: heroTag + item.id,
+              tag: heroTag + blog.id,
               child: Container(
                 height: 60,
                 width: 60,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.all(Radius.circular(5)),
                   image: DecorationImage(
-                      image: CachedNetworkImageProvider(item.image.thumb),
+                      image: CachedNetworkImageProvider(blog.image),
                       fit: BoxFit.cover),
                 ),
               ),
@@ -57,23 +58,23 @@ class ItemItemWidget extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
                         Text(
-                          item.name,
+                          blog.title,
                           overflow: TextOverflow.ellipsis,
                           maxLines: 2,
                           style: Theme.of(context).textTheme.subhead,
                         ),
                         Text(
-                          item.nursery.name,
-                          overflow: TextOverflow.ellipsis,
-                          maxLines: 2,
+                          "1 Feb 2020",
+                          overflow: TextOverflow.fade,
+                          softWrap: false,
                           style: Theme.of(context).textTheme.caption,
                         ),
                       ],
                     ),
                   ),
                   SizedBox(width: 8),
-                  Helper.getPrice(item.price,
-                      style: Theme.of(context).textTheme.display1),
+//                  Helper.getPrice(blog.price,
+//                      style: Theme.of(context).textTheme.display1),
                 ],
               ),
             )

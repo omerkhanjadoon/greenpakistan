@@ -1,5 +1,6 @@
 import 'dart:math';
 
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:green_pakistan/src/helpers/helper.dart';
 import 'package:green_pakistan/src/models/review.dart';
@@ -27,7 +28,8 @@ class ReviewItemWidget extends StatelessWidget {
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.all(Radius.circular(100)),
                   image: DecorationImage(
-                      image: NetworkImage(this.review.user.image.thumb),
+                      image: CachedNetworkImageProvider(
+                          this.review.user.image.thumb),
                       fit: BoxFit.cover),
                 ),
               ),

@@ -146,7 +146,7 @@ class _PagesTestWidgetState extends State<PagesTestWidget> {
                       color: Theme.of(context).primaryColor),
                 )),
             BottomNavigationBarItem(
-              icon: new Icon(Icons.fastitem),
+              icon: new Icon(Icons.local_florist),
               title: new Container(height: 0.0),
             ),
             BottomNavigationBarItem(

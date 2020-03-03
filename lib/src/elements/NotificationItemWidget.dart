@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:green_pakistan/src/models/notification.dart' as model;
 import 'package:intl/intl.dart' show DateFormat;
@@ -18,7 +19,8 @@ class NotificationItemWidget extends StatelessWidget {
           decoration: BoxDecoration(
             borderRadius: BorderRadius.all(Radius.circular(5)),
             image: DecorationImage(
-                image: NetworkImage(this.notification.type.image.thumb),
+                image: CachedNetworkImageProvider(
+                    this.notification.type.image.thumb),
                 fit: BoxFit.cover),
           ),
         ),

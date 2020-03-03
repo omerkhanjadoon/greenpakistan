@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:green_pakistan/src/helpers/helper.dart';
 import 'package:green_pakistan/src/models/nursery.dart';
@@ -33,7 +34,7 @@ class CardWidget extends StatelessWidget {
               height: 150,
               decoration: BoxDecoration(
                 image: DecorationImage(
-                  image: NetworkImage(nursery.image.url),
+                  image: CachedNetworkImageProvider(nursery.image.url),
                   fit: BoxFit.cover,
                 ),
                 borderRadius: BorderRadius.only(

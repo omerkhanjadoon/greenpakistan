@@ -2,7 +2,6 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
-import 'package:green_pakistan/generated/i18n.dart';
 import 'package:green_pakistan/src/controllers/controller.dart';
 import 'package:green_pakistan/src/repository/user_repository.dart';
 import 'package:mvc_pattern/mvc_pattern.dart';
@@ -24,7 +23,7 @@ class SplashScreenState extends StateMVC<SplashScreen> {
   @override
   void initState() {
     super.initState();
-    loadData();
+    onDoneLoading();
   }
 
   Future<Timer> loadData() async {
@@ -55,17 +54,6 @@ class SplashScreenState extends StateMVC<SplashScreen> {
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Icon(
-                Icons.nursery_menu,
-                size: 90,
-                color: Theme.of(context).scaffoldBackgroundColor,
-              ),
-              Text(
-                S.of(context).multinurserys,
-                style: Theme.of(context).textTheme.display1.merge(TextStyle(
-                    color: Theme.of(context).scaffoldBackgroundColor)),
-              ),
-              SizedBox(height: 50),
               CircularProgressIndicator(
                 valueColor: AlwaysStoppedAnimation<Color>(
                     Theme.of(context).scaffoldBackgroundColor),

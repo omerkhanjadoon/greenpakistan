@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:green_pakistan/generated/i18n.dart';
 import 'package:green_pakistan/src/controllers/settings_controller.dart';
@@ -77,8 +78,8 @@ class _SettingsWidgetState extends StateMVC<SettingsWidget> {
                                       .pushNamed('/Tabs', arguments: 1);
                                 },
                                 child: CircleAvatar(
-                                  backgroundImage:
-                                      NetworkImage(_con.user.image.thumb),
+                                  backgroundImage: CachedNetworkImageProvider(
+                                      _con.user.image.thumb),
                                 ),
                               )),
                         ],

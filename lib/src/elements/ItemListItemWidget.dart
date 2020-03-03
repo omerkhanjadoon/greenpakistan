@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:green_pakistan/src/helpers/helper.dart';
 import 'package:green_pakistan/src/models/item.dart';
@@ -43,7 +44,8 @@ class ItemListItemWidget extends StatelessWidget {
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.all(Radius.circular(5)),
                   image: DecorationImage(
-                      image: NetworkImage(item.image.thumb), fit: BoxFit.cover),
+                      image: CachedNetworkImageProvider(item.image.thumb),
+                      fit: BoxFit.cover),
                 ),
               ),
             ),

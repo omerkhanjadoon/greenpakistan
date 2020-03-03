@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:green_pakistan/src/helpers/helper.dart';
 import 'package:green_pakistan/src/models/cart.dart';
@@ -62,7 +63,8 @@ class _CartItemWidgetState extends State<CartItemWidget> {
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.all(Radius.circular(5)),
                   image: DecorationImage(
-                      image: NetworkImage(widget.cart.item.image.url),
+                      image: CachedNetworkImageProvider(
+                          widget.cart.item.image.url),
                       fit: BoxFit.cover),
                 ),
               ),

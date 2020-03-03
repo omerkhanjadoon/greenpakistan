@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:green_pakistan/src/models/route_argument.dart';
+import 'package:green_pakistan/src/pages/Consultancy.dart';
+import 'package:green_pakistan/src/pages/blog.dart';
 import 'package:green_pakistan/src/pages/cart.dart';
 import 'package:green_pakistan/src/pages/category.dart';
 import 'package:green_pakistan/src/pages/checkout.dart';
@@ -48,6 +50,10 @@ class RouteGenerator {
         return MaterialPageRoute(
             builder: (_) =>
                 DetailsWidget(routeArgument: args as RouteArgument));
+      case '/Blog':
+        return MaterialPageRoute(builder: (_) => BlogWidget());
+      case '/Consultancy':
+        return MaterialPageRoute(builder: (_) => ConsultancyWidget());
       case '/Map':
         return MaterialPageRoute(
             builder: (_) => MapWidget(routeArgument: args as RouteArgument));

@@ -1,8 +1,9 @@
+import 'package:argon_buttons_flutter/argon_buttons_flutter.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:green_pakistan/config/app_config.dart' as config;
 import 'package:green_pakistan/generated/i18n.dart';
 import 'package:green_pakistan/src/controllers/user_controller.dart';
-import 'package:green_pakistan/src/elements/BlockButtonWidget.dart';
 import 'package:green_pakistan/src/repository/user_repository.dart' as userRepo;
 import 'package:mvc_pattern/mvc_pattern.dart';
 
@@ -165,15 +166,43 @@ class _LoginWidgetState extends StateMVC<LoginWidget> {
                         ),
                       ),
                       SizedBox(height: 30),
-                      BlockButtonWidget(
-                        text: Text(
+                      ArgonButton(
+                        height: 50,
+                        width: MediaQuery.of(context).size.width * 0.45,
+                        minWidth: MediaQuery.of(context).size.width * 0.10,
+                        roundLoadingShape: true,
+                        borderRadius: 5.0,
+                        color: Theme.of(context).accentColor,
+                        child: Text(
                           S.of(context).login,
                           style:
                               TextStyle(color: Theme.of(context).primaryColor),
                         ),
-                        color: Theme.of(context).accentColor,
-                        onPressed: () {
-                          _con.login();
+                        loader: Container(
+                          padding: EdgeInsets.all(4),
+                          child: SpinKitDoubleBounce(
+                            color: Colors.white,
+                          ),
+                        ),
+                        onTap: (startLoading, stopLoading, btnState) async {
+//                          if (btnState == ButtonState.Idle) {
+//                            startLoading();
+//                          } else {
+//                            stopLoading();
+//                          }
+                          _con.login(startLoading, stopLoading, btnState);
+//                          if (value == true) {
+//                            print(value);
+//                            stopLoading();
+//                            Navigator.of(context)
+//                                .pushReplacementNamed('/Pages', arguments: 2);
+//                          } else {
+//                            print(value);
+//                            stopLoading();
+////                              Scaffold.of(context).showSnackBar(SnackBar(
+////                                content: Text('Wrong email or password'),
+////                              ));
+//                          }
                         },
                       ),
                       SizedBox(height: 25),

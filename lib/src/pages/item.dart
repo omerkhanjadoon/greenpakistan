@@ -4,7 +4,6 @@ import 'package:green_pakistan/generated/i18n.dart';
 import 'package:green_pakistan/src/controllers/item_controller.dart';
 import 'package:green_pakistan/src/elements/AddToCartAlertDialog.dart';
 import 'package:green_pakistan/src/elements/CircularLoadingWidget.dart';
-import 'package:green_pakistan/src/elements/ExtraItemWidget.dart';
 import 'package:green_pakistan/src/elements/ReviewsListWidget.dart';
 import 'package:green_pakistan/src/elements/ShoppingCartFloatButtonWidget.dart';
 import 'package:green_pakistan/src/helpers/helper.dart';
@@ -136,126 +135,126 @@ class _ItemWidgetState extends StateMVC<ItemWidget> {
                                 ),
                                 Divider(height: 40),
                                 Text(Helper.skipHtml(_con.item.description)),
-                                ListTile(
-                                  dense: true,
-                                  contentPadding:
-                                      EdgeInsets.symmetric(vertical: 10),
-                                  leading: Icon(
-                                    Icons.add_circle,
-                                    color: Theme.of(context).hintColor,
-                                  ),
-                                  title: Text(
-                                    S.of(context).extras,
-                                    style: Theme.of(context).textTheme.subhead,
-                                  ),
-                                  subtitle: Text(
-                                    S
-                                        .of(context)
-                                        .select_extras_to_add_them_on_the_item,
-                                    style: Theme.of(context).textTheme.caption,
-                                  ),
-                                ),
-                                ListView.separated(
-                                  padding: EdgeInsets.all(0),
-                                  itemBuilder: (context, index) {
-                                    return ExtraItemWidget(
-                                      extra: _con.item.extras.elementAt(index),
-                                      onChanged: _con.calculateTotal,
-                                    );
-                                  },
-                                  separatorBuilder: (context, index) {
-                                    return SizedBox(height: 20);
-                                  },
-                                  itemCount: _con.item.extras.length,
-                                  primary: false,
-                                  shrinkWrap: true,
-                                ),
-                                ListTile(
-                                  dense: true,
-                                  contentPadding:
-                                      EdgeInsets.symmetric(vertical: 10),
-                                  leading: Icon(
-                                    Icons.donut_small,
-                                    color: Theme.of(context).hintColor,
-                                  ),
-                                  title: Text(
-                                    S.of(context).ingredients,
-                                    style: Theme.of(context).textTheme.subhead,
-                                  ),
-                                ),
-                                Helper.applyHtml(context, _con.item.ingredients,
-                                    style: TextStyle(fontSize: 12)),
-                                ListTile(
-                                  dense: true,
-                                  contentPadding:
-                                      EdgeInsets.symmetric(vertical: 10),
-                                  leading: Icon(
-                                    Icons.local_activity,
-                                    color: Theme.of(context).hintColor,
-                                  ),
-                                  title: Text(
-                                    S.of(context).nutrition,
-                                    style: Theme.of(context).textTheme.subhead,
-                                  ),
-                                ),
-                                Wrap(
-                                  spacing: 8,
-                                  runSpacing: 8,
-                                  children: List.generate(
-                                      _con.item.nutritions.length, (index) {
-                                    return Container(
-                                      padding: EdgeInsets.symmetric(
-                                          horizontal: 10, vertical: 8),
-                                      decoration: BoxDecoration(
-                                          color: Theme.of(context).primaryColor,
-                                          borderRadius: BorderRadius.all(
-                                              Radius.circular(5)),
-                                          boxShadow: [
-                                            BoxShadow(
-                                                color: Theme.of(context)
-                                                    .focusColor
-                                                    .withOpacity(0.2),
-                                                offset: Offset(0, 2),
-                                                blurRadius: 6.0)
-                                          ]),
-                                      child: Column(
-                                        mainAxisSize: MainAxisSize.min,
-                                        children: <Widget>[
-                                          Text(
-                                              _con.item.nutritions
-                                                  .elementAt(index)
-                                                  .name,
-                                              overflow: TextOverflow.ellipsis,
-                                              style: Theme.of(context)
-                                                  .textTheme
-                                                  .caption),
-                                          Text(
-                                              _con.item.nutritions
-                                                  .elementAt(index)
-                                                  .quantity
-                                                  .toString(),
-                                              overflow: TextOverflow.ellipsis,
-                                              style: Theme.of(context)
-                                                  .textTheme
-                                                  .headline),
-                                        ],
-                                      ),
-                                    );
-                                  }),
-                                ),
-                                ListTile(
-                                  dense: true,
-                                  contentPadding:
-                                      EdgeInsets.symmetric(vertical: 10),
-                                  leading: Icon(
-                                    Icons.recent_actors,
-                                    color: Theme.of(context).hintColor,
-                                  ),
-                                  title: Text(
-                                    S.of(context).reviews,
-                                    style: Theme.of(context).textTheme.subhead,
-                                  ),
-                                ),
+//                                ListTile(
+//                                  dense: true,
+//                                  contentPadding:
+//                                      EdgeInsets.symmetric(vertical: 10),
+//                                  leading: Icon(
+//                                    Icons.add_circle,
+//                                    color: Theme.of(context).hintColor,
+//                                  ),
+//                                  title: Text(
+//                                    S.of(context).extras,
+//                                    style: Theme.of(context).textTheme.subhead,
+//                                  ),
+//                                  subtitle: Text(
+//                                    S
+//                                        .of(context)
+//                                        .select_extras_to_add_them_on_the_item,
+//                                    style: Theme.of(context).textTheme.caption,
+//                                  ),
+//                                ),
+//                                ListView.separated(
+//                                  padding: EdgeInsets.all(0),
+//                                  itemBuilder: (context, index) {
+//                                    return ExtraItemWidget(
+//                                      extra: _con.item.extras.elementAt(index),
+//                                      onChanged: _con.calculateTotal,
+//                                    );
+//                                  },
+//                                  separatorBuilder: (context, index) {
+//                                    return SizedBox(height: 20);
+//                                  },
+//                                  itemCount: _con.item.extras.length,
+//                                  primary: false,
+//                                  shrinkWrap: true,
+//                                ),
+//                                ListTile(
+//                                  dense: true,
+//                                  contentPadding:
+//                                      EdgeInsets.symmetric(vertical: 10),
+//                                  leading: Icon(
+//                                    Icons.donut_small,
+//                                    color: Theme.of(context).hintColor,
+//                                  ),
+//                                  title: Text(
+//                                    S.of(context).ingredients,
+//                                    style: Theme.of(context).textTheme.subhead,
+//                                  ),
+//                                ),
+////                                Helper.applyHtml(context, _con.item.ingredients,
+////                                    style: TextStyle(fontSize: 12)),
+////                                ListTile(
+////                                  dense: true,
+////                                  contentPadding:
+////                                      EdgeInsets.symmetric(vertical: 10),
+////                                  leading: Icon(
+////                                    Icons.local_activity,
+////                                    color: Theme.of(context).hintColor,
+////                                  ),
+////                                  title: Text(
+////                                    S.of(context).nutrition,
+////                                    style: Theme.of(context).textTheme.subhead,
+////                                  ),
+////                                ),
+////                                Wrap(
+////                                  spacing: 8,
+////                                  runSpacing: 8,
+////                                  children: List.generate(
+////                                      _con.item.nutritions.length, (index) {
+////                                    return Container(
+////                                      padding: EdgeInsets.symmetric(
+////                                          horizontal: 10, vertical: 8),
+////                                      decoration: BoxDecoration(
+////                                          color: Theme.of(context).primaryColor,
+////                                          borderRadius: BorderRadius.all(
+////                                              Radius.circular(5)),
+////                                          boxShadow: [
+////                                            BoxShadow(
+////                                                color: Theme.of(context)
+////                                                    .focusColor
+////                                                    .withOpacity(0.2),
+////                                                offset: Offset(0, 2),
+////                                                blurRadius: 6.0)
+////                                          ]),
+////                                      child: Column(
+////                                        mainAxisSize: MainAxisSize.min,
+////                                        children: <Widget>[
+////                                          Text(
+////                                              _con.item.nutritions
+////                                                  .elementAt(index)
+////                                                  .name,
+////                                              overflow: TextOverflow.ellipsis,
+////                                              style: Theme.of(context)
+////                                                  .textTheme
+////                                                  .caption),
+////                                          Text(
+////                                              _con.item.nutritions
+////                                                  .elementAt(index)
+////                                                  .quantity
+////                                                  .toString(),
+////                                              overflow: TextOverflow.ellipsis,
+////                                              style: Theme.of(context)
+////                                                  .textTheme
+////                                                  .headline),
+////                                        ],
+////                                      ),
+////                                    );
+////                                  }),
+////                                ),
+//                                ListTile(
+//                                  dense: true,
+//                                  contentPadding:
+//                                      EdgeInsets.symmetric(vertical: 10),
+//                                  leading: Icon(
+//                                    Icons.recent_actors,
+//                                    color: Theme.of(context).hintColor,
+//                                  ),
+//                                  title: Text(
+//                                    S.of(context).reviews,
+//                                    style: Theme.of(context).textTheme.subhead,
+//                                  ),
+//                                ),
                                 ReviewsListWidget(
                                   reviewsList: _con.item.itemReviews,
                                 ),

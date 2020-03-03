@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:dynamic_theme/dynamic_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:green_pakistan/src/controllers/profile_controller.dart';
@@ -44,7 +45,8 @@ class _DrawerWidgetState extends StateMVC<DrawerWidget> {
                     ),
                     currentAccountPicture: CircleAvatar(
                       backgroundColor: Theme.of(context).accentColor,
-                      backgroundImage: NetworkImage(_con.user.image.thumb),
+                      backgroundImage:
+                          CachedNetworkImageProvider(_con.user.image.thumb),
                     ),
                   ),
                 ),
@@ -82,7 +84,7 @@ class _DrawerWidgetState extends StateMVC<DrawerWidget> {
                     );
                   },
                   leading: Icon(
-                    Icons.fastitem,
+                    Icons.local_florist,
                     color: Theme.of(context).focusColor.withOpacity(1),
                   ),
                   title: Text(
@@ -100,6 +102,32 @@ class _DrawerWidgetState extends StateMVC<DrawerWidget> {
                   ),
                   title: Text(
                     "Favorite Items",
+                    style: Theme.of(context).textTheme.subhead,
+                  ),
+                ),
+                ListTile(
+                  onTap: () {
+                    Navigator.of(context).pushNamed('/Blog');
+                  },
+                  leading: Icon(
+                    Icons.assignment,
+                    color: Theme.of(context).focusColor.withOpacity(1),
+                  ),
+                  title: Text(
+                    "Learn To Plant",
+                    style: Theme.of(context).textTheme.subhead,
+                  ),
+                ),
+                ListTile(
+                  onTap: () {
+                    Navigator.of(context).pushNamed('/Consultancy');
+                  },
+                  leading: Icon(
+                    Icons.headset_mic,
+                    color: Theme.of(context).focusColor.withOpacity(1),
+                  ),
+                  title: Text(
+                    "Online Consultancy",
                     style: Theme.of(context).textTheme.subhead,
                   ),
                 ),

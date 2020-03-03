@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:green_pakistan/src/models/item.dart';
 import 'package:green_pakistan/src/models/route_argument.dart';
@@ -29,7 +30,8 @@ class ItemGridItemWidget extends StatelessWidget {
                   child: Container(
                     decoration: BoxDecoration(
                       image: DecorationImage(
-                          image: NetworkImage(this.item.image.thumb),
+                          image:
+                              CachedNetworkImageProvider(this.item.image.thumb),
                           fit: BoxFit.cover),
                       borderRadius: BorderRadius.circular(5),
                     ),

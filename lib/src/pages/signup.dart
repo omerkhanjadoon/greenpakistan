@@ -1,9 +1,10 @@
+import 'package:argon_buttons_flutter/argon_buttons_flutter.dart';
 import 'package:flutter/material.dart';
-import 'package:mvc_pattern/mvc_pattern.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:green_pakistan/config/app_config.dart' as config;
 import 'package:green_pakistan/generated/i18n.dart';
 import 'package:green_pakistan/src/controllers/user_controller.dart';
-import 'package:green_pakistan/src/elements/BlockButtonWidget.dart';
+import 'package:mvc_pattern/mvc_pattern.dart';
 
 class SignUpWidget extends StatefulWidget {
   @override
@@ -41,7 +42,10 @@ class _SignUpWidgetState extends StateMVC<SignUpWidget> {
                 height: config.App(context).appHeight(29.5),
                 child: Text(
                   S.of(context).lets_start_with_register,
-                  style: Theme.of(context).textTheme.display3.merge(TextStyle(color: Theme.of(context).primaryColor)),
+                  style: Theme.of(context)
+                      .textTheme
+                      .display3
+                      .merge(TextStyle(color: Theme.of(context).primaryColor)),
                 ),
               ),
             ),
@@ -72,54 +76,93 @@ class _SignUpWidgetState extends StateMVC<SignUpWidget> {
                       TextFormField(
                         keyboardType: TextInputType.text,
                         onSaved: (input) => _con.user.name = input,
-                        validator: (input) => input.length < 3 ? S.of(context).should_be_more_than_3_letters : null,
+                        validator: (input) => input.length < 3
+                            ? S.of(context).should_be_more_than_3_letters
+                            : null,
                         decoration: InputDecoration(
                           labelText: S.of(context).full_name,
-                          labelStyle: TextStyle(color: Theme.of(context).accentColor),
+                          labelStyle:
+                              TextStyle(color: Theme.of(context).accentColor),
                           contentPadding: EdgeInsets.all(12),
                           hintText: S.of(context).john_doe,
-                          hintStyle: TextStyle(color: Theme.of(context).focusColor.withOpacity(0.7)),
-                          prefixIcon: Icon(Icons.person_outline, color: Theme.of(context).accentColor),
+                          hintStyle: TextStyle(
+                              color: Theme.of(context)
+                                  .focusColor
+                                  .withOpacity(0.7)),
+                          prefixIcon: Icon(Icons.person_outline,
+                              color: Theme.of(context).accentColor),
                           border: OutlineInputBorder(
-                              borderSide: BorderSide(color: Theme.of(context).focusColor.withOpacity(0.2))),
+                              borderSide: BorderSide(
+                                  color: Theme.of(context)
+                                      .focusColor
+                                      .withOpacity(0.2))),
                           focusedBorder: OutlineInputBorder(
-                              borderSide: BorderSide(color: Theme.of(context).focusColor.withOpacity(0.5))),
+                              borderSide: BorderSide(
+                                  color: Theme.of(context)
+                                      .focusColor
+                                      .withOpacity(0.5))),
                           enabledBorder: OutlineInputBorder(
-                              borderSide: BorderSide(color: Theme.of(context).focusColor.withOpacity(0.2))),
+                              borderSide: BorderSide(
+                                  color: Theme.of(context)
+                                      .focusColor
+                                      .withOpacity(0.2))),
                         ),
                       ),
                       SizedBox(height: 30),
                       TextFormField(
                         keyboardType: TextInputType.emailAddress,
                         onSaved: (input) => _con.user.email = input,
-                        validator: (input) => !input.contains('@') ? S.of(context).should_be_a_valid_email : null,
+                        validator: (input) => !input.contains('@')
+                            ? S.of(context).should_be_a_valid_email
+                            : null,
                         decoration: InputDecoration(
                           labelText: S.of(context).email,
-                          labelStyle: TextStyle(color: Theme.of(context).accentColor),
+                          labelStyle:
+                              TextStyle(color: Theme.of(context).accentColor),
                           contentPadding: EdgeInsets.all(12),
                           hintText: 'johndoe@gmail.com',
-                          hintStyle: TextStyle(color: Theme.of(context).focusColor.withOpacity(0.7)),
-                          prefixIcon: Icon(Icons.alternate_email, color: Theme.of(context).accentColor),
+                          hintStyle: TextStyle(
+                              color: Theme.of(context)
+                                  .focusColor
+                                  .withOpacity(0.7)),
+                          prefixIcon: Icon(Icons.alternate_email,
+                              color: Theme.of(context).accentColor),
                           border: OutlineInputBorder(
-                              borderSide: BorderSide(color: Theme.of(context).focusColor.withOpacity(0.2))),
+                              borderSide: BorderSide(
+                                  color: Theme.of(context)
+                                      .focusColor
+                                      .withOpacity(0.2))),
                           focusedBorder: OutlineInputBorder(
-                              borderSide: BorderSide(color: Theme.of(context).focusColor.withOpacity(0.5))),
+                              borderSide: BorderSide(
+                                  color: Theme.of(context)
+                                      .focusColor
+                                      .withOpacity(0.5))),
                           enabledBorder: OutlineInputBorder(
-                              borderSide: BorderSide(color: Theme.of(context).focusColor.withOpacity(0.2))),
+                              borderSide: BorderSide(
+                                  color: Theme.of(context)
+                                      .focusColor
+                                      .withOpacity(0.2))),
                         ),
                       ),
                       SizedBox(height: 30),
                       TextFormField(
                         obscureText: _con.hidePassword,
                         onSaved: (input) => _con.user.password = input,
-                        validator: (input) => input.length < 6 ? S.of(context).should_be_more_than_6_letters : null,
+                        validator: (input) => input.length < 6
+                            ? S.of(context).should_be_more_than_6_letters
+                            : null,
                         decoration: InputDecoration(
                           labelText: S.of(context).password,
-                          labelStyle: TextStyle(color: Theme.of(context).accentColor),
+                          labelStyle:
+                              TextStyle(color: Theme.of(context).accentColor),
                           contentPadding: EdgeInsets.all(12),
                           hintText: '••••••••••••',
-                          hintStyle: TextStyle(color: Theme.of(context).focusColor.withOpacity(0.7)),
-                          prefixIcon: Icon(Icons.lock_outline, color: Theme.of(context).accentColor),
+                          hintStyle: TextStyle(
+                              color: Theme.of(context)
+                                  .focusColor
+                                  .withOpacity(0.7)),
+                          prefixIcon: Icon(Icons.lock_outline,
+                              color: Theme.of(context).accentColor),
                           suffixIcon: IconButton(
                             onPressed: () {
                               setState(() {
@@ -127,27 +170,68 @@ class _SignUpWidgetState extends StateMVC<SignUpWidget> {
                               });
                             },
                             color: Theme.of(context).focusColor,
-                            icon: Icon(_con.hidePassword ? Icons.visibility : Icons.visibility_off),
+                            icon: Icon(_con.hidePassword
+                                ? Icons.visibility
+                                : Icons.visibility_off),
                           ),
                           border: OutlineInputBorder(
-                              borderSide: BorderSide(color: Theme.of(context).focusColor.withOpacity(0.2))),
+                              borderSide: BorderSide(
+                                  color: Theme.of(context)
+                                      .focusColor
+                                      .withOpacity(0.2))),
                           focusedBorder: OutlineInputBorder(
-                              borderSide: BorderSide(color: Theme.of(context).focusColor.withOpacity(0.5))),
+                              borderSide: BorderSide(
+                                  color: Theme.of(context)
+                                      .focusColor
+                                      .withOpacity(0.5))),
                           enabledBorder: OutlineInputBorder(
-                              borderSide: BorderSide(color: Theme.of(context).focusColor.withOpacity(0.2))),
+                              borderSide: BorderSide(
+                                  color: Theme.of(context)
+                                      .focusColor
+                                      .withOpacity(0.2))),
                         ),
                       ),
                       SizedBox(height: 30),
-                      BlockButtonWidget(
-                        text: Text(
-                          S.of(context).register,
-                          style: TextStyle(color: Theme.of(context).primaryColor),
-                        ),
+                      ArgonButton(
+                        height: 50,
+                        width: MediaQuery.of(context).size.width * 0.45,
+                        minWidth: MediaQuery.of(context).size.width * 0.10,
+                        roundLoadingShape: true,
+                        borderRadius: 5.0,
                         color: Theme.of(context).accentColor,
-                        onPressed: () {
-                          _con.register();
+                        child: Text(
+                          S.of(context).register,
+                          style:
+                              TextStyle(color: Theme.of(context).primaryColor),
+                        ),
+                        loader: Container(
+                          padding: EdgeInsets.all(4),
+                          child: SpinKitDoubleBounce(
+                            color: Colors.white,
+                          ),
+                        ),
+                        onTap: (startLoading, stopLoading, btnState) async {
+//                          if (btnState == ButtonState.Idle) {
+//                            startLoading();
+//                          } else {
+//                            stopLoading();
+//                          }
+                          _con.register(startLoading, stopLoading, btnState);
+//                          if (value == true) {
+//                            print(value);
+//                            stopLoading();
+//                            Navigator.of(context)
+//                                .pushReplacementNamed('/Pages', arguments: 2);
+//                          } else {
+//                            print(value);
+//                            stopLoading();
+////                              Scaffold.of(context).showSnackBar(SnackBar(
+////                                content: Text('Wrong email or password'),
+////                              ));
+//                          }
                         },
                       ),
+
                       SizedBox(height: 25),
 //                      FlatButton(
 //                        onPressed: () {

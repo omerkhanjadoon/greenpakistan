@@ -12,8 +12,8 @@ import 'package:green_pakistan/src/repository/settings_repository.dart'
 
 FirebaseAnalytics analytics = FirebaseAnalytics();
 final Map<String, String> appSettings = {
-  "base_url": "http://192.168.0.108/flutterproject/public/",
-  "api_base_url": "http://192.168.0.108/flutterproject/public/api/",
+  "base_url": "https://greenpakistan.mobilediagnostics.website/public/",
+  "api_base_url": "https://greenpakistan.mobilediagnostics.website/public/api/",
   "google_maps_key": "AIzaSyAieO9rN_eLKyapkeIu3KNw1xzQbwiJFfA"
 };
 

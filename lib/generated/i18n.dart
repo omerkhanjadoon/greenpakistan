@@ -61,7 +61,7 @@ class S implements WidgetsLocalizations {
   String get longpress_on_the_item_to_add_suplements =>
       "Longpress on the item to add suplements";
   String get maps_explorer => "Maps Explorer";
-  String get menu => "Menu";
+  String get menu => "Products";
   String get most_popular => "Most Popular";
   String get multinurserys => "Multi-Nursery";
   String get my_orders => "My Orders";
@@ -84,7 +84,7 @@ class S implements WidgetsLocalizations {
   String get recent_reviews1 => "Recent Reviews1";
   String get register => "Register";
   String get reviews => "Reviews";
-  String get search_for_nurserys_or_items => "Search for nurserys or items";
+  String get search_for_nurserys_or_items => "Search for nurserys or plants";
   String get select_extras_to_add_them_on_the_item =>
       "Select extras to add them on the item";
   String get select_your_preferred_languages =>
@@ -285,6 +285,182 @@ class $ar extends S {
   String get register => "Register";
 }
 
+//urdu
+class $ur extends S {
+  const $ur();
+
+  @override
+  TextDirection get textDirection => TextDirection.rtl;
+
+  @override
+  String get default_credit_card => "Default Credit Card";
+  @override
+  String get app_language => "ایپ کی زبان";
+  @override
+  String get longpress_on_the_item_to_add_suplements =>
+      "Longpress on the item to add suplements";
+  @override
+  String get help_support => "مدد";
+  @override
+  String get double_click_on_the_item_to_add_it_to_the =>
+      "Double click on the item to add it to the cart";
+  @override
+  String get about => "ہمارے بارے میں";
+  @override
+  String get select_your_preferred_payment_mode =>
+      "حدد كيفة الدفع المفضلة لديك";
+  @override
+  String get add_to_cart => "ٹوکری میں شامل کریں";
+  @override
+  String get select_your_preferred_languages => "اپنی ترجیحی زبان منتخب کریں";
+  @override
+  String get all_menu => "تمام پلانٹ";
+  @override
+  String get search_for_nurserys_or_items => "نرسری یا آئٹم کی تلاش کریں";
+  @override
+  String get should_be_a_valid_email => "درست ای میل ہونا چاہئے";
+  @override
+  String get password => "پاس ورڈ";
+  @override
+  String get select_extras_to_add_them_on_the_item =>
+      "Select extras to add them on the item";
+  @override
+  String get reviews => "جائزہ";
+  @override
+  String get you_can_discover_nurserys =>
+      "You can discover nurserys & fastitem arround you and choose you best meal after few minutes we prepare and delivere it for you";
+  @override
+  String get faq => "Faq";
+  @override
+  String get i_dont_have_an_account => "میرے پاس کوئی اکاؤنٹ نہیں ہے؟";
+  @override
+  String get english => "انگریزی";
+  @override
+  String get should_be_more_than_3_letters => "3 حرف سے زیادہ ہونا چاہئے";
+  @override
+  String get lets_start_with_register => "آئیے رجسٹر کے ساتھ شروع کریں!";
+  @override
+  String get payment_options => "آدائیگی کے طریقے";
+  @override
+  String get settings => "ترتیبات";
+  @override
+  String get recent_reviews => "حالیہ جائزے";
+  @override
+  String get profile => "پروفائل";
+  @override
+  String get top_nurserys => "بہترین نرسری";
+  @override
+  String get tax => "ٹیکس";
+  @override
+  String get confirmation => "تصدیق";
+  @override
+  String get paypal_payment => "PayPal Payment";
+  @override
+  String get nutrition => "Nutrition";
+  @override
+  String get payments_settings => "Payments Settings";
+  @override
+  String get full_name => "پورا نام";
+  @override
+  String get phone => "فون";
+  @override
+  String get subtotal => "ذیلی کل";
+  @override
+  String get my_orders => "میرے احکام";
+  @override
+  String get featured_items => "نمایاں اشیاء";
+  @override
+  String get order_id => "آرڈر کی شناخت";
+  @override
+  String get notifications => "اطلاعات";
+  @override
+  String get favorites => "پسندیدہ";
+  @override
+  String get i_have_account_back_to_login =>
+      "میرا اکاؤنٹ ہے؟ لاگ ان پر واپس جائیں";
+  @override
+  String get submit => "جمع کرائیں";
+  @override
+  String get john_doe => "John Doe";
+  @override
+  String get what_they_say => "ماذا يقولون";
+  @override
+  String get extras => "إضافات";
+  @override
+  String get skip => "چھوڑ دو";
+  @override
+  String get your_order_has_been_successfully_submitted =>
+      "آپ کا آرڈر کامیابی کے ساتھ پیش کردیا گیا ہے!";
+  @override
+  String get login => "لاگ ان کریں";
+  @override
+  String get cash_on_delivery => "ادائیگی وصولی کے وقت";
+  @override
+  String get recent_orders => "حالیہ احکامات";
+  @override
+  String get total => "کل";
+  @override
+  String get favorite_items => "پسندیدہ اشیاء";
+  @override
+  String get ordered_by_nearby_first => "سب سے قریب کی طرف سے ترتیبً";
+  @override
+  String get or_checkout_with => "أو الدفع عبر";
+  @override
+  String get verify => "تصدیق کریں";
+  @override
+  String get ingredients => "Ingredients";
+  @override
+  String get checkout => "آرڈر مکمل کریں";
+  @override
+  String get email => "ای میل";
+  @override
+  String get payment_mode => "كيفية الدفع";
+  @override
+  String get quantity => "Quantity";
+  @override
+  String get address => "پتہ";
+  @override
+  String get multinurserys => "Multi-Nursery";
+  @override
+  String get languages => "زبانیں";
+  @override
+  String get profile_settings => "پروفائل کی ترتیبات";
+  @override
+  String get app_settings => "ایپ کی ترتیبات";
+  @override
+  String get g => "غ";
+  @override
+  String get tracking_order => "ٹریکنگ آرڈر";
+  @override
+  String get menu => "اشیاء";
+  @override
+  String get item_categories => "آئٹم کے زمرے";
+  @override
+  String get confirm_payment => "ادائیگی کی تصدیق";
+  @override
+  String get home => "گھر";
+  @override
+  String get should_be_more_than_6_letters => "6 حرف سے زیادہ ہونا چاہئے";
+  @override
+  String get help_supports => "مدد";
+  @override
+  String get trending_this_week => "ہفتہ کا رجحان";
+  @override
+  String get maps_explorer => "Maps Explorer";
+  @override
+  String get i_forgot_password => "I forgot password ?";
+  @override
+  String get information => "معلومات";
+  @override
+  String get discover__explorer => "دریافت اور ایکسپلورر";
+  @override
+  String get most_popular => "سب سے زیادہ مقبول";
+  @override
+  String get category => "قسم";
+  @override
+  String get register => "رجسٹر کریں";
+}
+
 class $pt extends S {
   const $pt();
 
@@ -433,7 +609,7 @@ class $pt extends S {
   @override
   String get tracking_order => "Tracking Order";
   @override
-  String get menu => "Menu";
+  String get menu => "Products";
   @override
   String get item_categories => "Item Categories";
   @override
@@ -610,7 +786,7 @@ class $in extends S {
   @override
   String get tracking_order => "Tracking Order";
   @override
-  String get menu => "Menu";
+  String get menu => "Products";
   @override
   String get item_categories => "Item Categories";
   @override
@@ -791,7 +967,7 @@ class $fr extends S {
   @override
   String get tracking_order => "Tracking Order";
   @override
-  String get menu => "Menu";
+  String get menu => "Products";
   @override
   String get item_categories => "Item Categories";
   @override
@@ -968,7 +1144,7 @@ class $es extends S {
   @override
   String get tracking_order => "Tracking Order";
   @override
-  String get menu => "Menu";
+  String get menu => "Products";
   @override
   String get item_categories => "Item Categories";
   @override
@@ -1003,6 +1179,7 @@ class GeneratedLocalizationsDelegate extends LocalizationsDelegate<S> {
   List<Locale> get supportedLocales {
     return const <Locale>[
       Locale("ar", ""),
+      Locale("ur", ""),
       Locale("pt", ""),
       Locale("in", ""),
       Locale("en", ""),
@@ -1036,6 +1213,9 @@ class GeneratedLocalizationsDelegate extends LocalizationsDelegate<S> {
       switch (lang) {
         case "ar":
           S.current = const $ar();
+          return SynchronousFuture<S>(S.current);
+        case "ur":
+          S.current = const $ur();
           return SynchronousFuture<S>(S.current);
         case "pt":
           S.current = const $pt();

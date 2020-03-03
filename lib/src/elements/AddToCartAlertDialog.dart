@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:green_pakistan/src/models/item.dart';
 
@@ -68,7 +69,7 @@ class AddToCartAlertDialogWidget extends StatelessWidget {
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.all(Radius.circular(5)),
                         image: DecorationImage(
-                            image: NetworkImage(
+                            image: CachedNetworkImageProvider(
                                 this.newItem?.nursery?.image?.thumb),
                             fit: BoxFit.cover),
                       ),
@@ -134,8 +135,8 @@ class AddToCartAlertDialogWidget extends StatelessWidget {
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.all(Radius.circular(5)),
                         image: DecorationImage(
-                            image:
-                                NetworkImage(this.oldItem.nursery.image.thumb),
+                            image: CachedNetworkImageProvider(
+                                this.oldItem.nursery.image.thumb),
                             fit: BoxFit.cover),
                       ),
                     ),

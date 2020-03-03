@@ -51,7 +51,7 @@ class _DetailsWidgetState extends StateMVC<DetailsWidget> {
           },
           isExtended: true,
           materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
-          icon: Icon(Icons.nursery),
+          icon: Icon(Icons.local_florist),
           label: Text(S.of(context).menu),
         ),
         floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
@@ -268,7 +268,7 @@ class _DetailsWidgetState extends StateMVC<DetailsWidget> {
                                         contentPadding:
                                             EdgeInsets.symmetric(vertical: 0),
                                         leading: Icon(
-                                          Icons.nursery,
+                                          Icons.local_florist,
                                           color: Theme.of(context).hintColor,
                                         ),
                                         title: Text(
